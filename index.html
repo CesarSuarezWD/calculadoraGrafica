@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficadora</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js" 
+    integrity="sha512-b3xr4frvDIeyC3gqR1/iOi6T+m3pLlQyXNuvn5FiRrrKiMUJK3du2QqZbCywH6JxS5EOfW0DY0M6WwdXFbCBLQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>Gráficadora de Valores (Ingresa máximo 5 valores!)</h1>
+    <section class="contenedorPrincipal">
+        <section class="contenedorPrincipal__canvas">
+            <canvas id="canvasPuntos" width="500" height="500"></canvas>
+        </section>
+        <section class="contenedorPrincipal__controlesTA">
+            <h2>Ingresa las coordenadas de tu punto! (Valor Max 250 en cada eje)</h2>
+            <input class="contenedor__input--x" id="inputX" type="number" placeholder="Valor de X">
+            <input class="contenedor__input--y" id="inputY" type="number" placeholder="Valor de Y">
+            <button class="contenedor__boton--graficar" onclick="graficar()">Graficar Punto</button>
+            <button class="contenedor__boton--borrar" onclick="borrar()">Borrar</button>
+            <p class="contenedor__p--informacionTA">Coordenadas de los Puntos Ingresados:</p>
+            <textarea class="contenedor__TA--resultados" name="" id="TAResultados" cols="30" rows="4" readonly></textarea>
+            <section class="canvasGrafica">
+                <canvas id="canvasGrafica" width="400" height="150"></canvas>
+
+            </section>
+        </section>
+    </section>
+    
+    <script src="graficadora.js"></script>
+    <link rel="stylesheet" href="graficadora.css">
+</body>
+</html>
